@@ -3,7 +3,7 @@ import BannerImg from "@/assets/banner.png"
 
 const Banner = () => {
   return (
-    <section className="mx-auto mt-6 max-w-[1200px] px-3 mb-15">
+    <section className="mx-auto mt-6 max-w-[1200px] px-3 mb-12">
       <div className="flex min-h-[300px] items-center justify-between overflow-hidden rounded-xl border border-[#24252a] bg-[#15171c] px-10 py-8">
 
         {/* Left Content */}
