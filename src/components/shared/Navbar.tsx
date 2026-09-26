@@ -5,7 +5,7 @@ import logo from "@/assets/logo.png"
 const Navbar = () => {
     return (
         <nav className="mx-[10px] h-[68px] border border-[#24252a] bg-[#0c0d0f] container mx-auto">
-            <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-5">
+            <div className="mx-auto flex h-full max-w-[1200px] items-center justify-between px-3">
 
                 <Link href="/" className="flex items-center gap-2">
                     <Image

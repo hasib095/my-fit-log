@@ -6,14 +6,14 @@ import Link from 'next/link';
 const Footer = () => {
     return (
         <div>
-            <div className='flex justify-between bg-black container mx-auto items-center'>
+            <div className='flex justify-between bg-[#0c0d0f] container mx-auto items-center'>
                 <div>
                     <Link href="/" className="flex items-center gap-2 p-10">
                     <Image
                         src={logo}
                         alt="Book Vibe Logo"
-                        width={30}
-                        height={30}
+                        width={20}
+                        height={20}
                     />
                     <span className="text-[18px] font-bold tracking-wide text-white mx-2">
                         FITLOG
