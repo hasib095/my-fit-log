@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { Workout } from "@/types/workout";
-import WorkoutActions from "@/components/workoutDetails/WorkoutActions";
+import WorkoutActions from "@/components/workoutDetails/WorkoutAction";
 
 interface WorkoutDetailsPageProps {
   params: Promise<{
@@ -15,7 +15,7 @@ const WorkoutDetailsPage = async ({
   const { id } = await params;
 
   const response = await fetch(
-    `https://api.abcz.workers.dev/api/fitlog/${id}`,
+    `https://api.api-store.workers.dev/api/fitlog/${id}`,
     {
       cache: "no-store",
     }

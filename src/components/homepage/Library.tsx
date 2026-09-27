@@ -1,19 +1,17 @@
 import WorkoutCard from "./WorkoutCard";
 import { Workout } from "@/types/workout";
 
-const API_URL = "https://api.abcz.workers.dev/api/fitlog";
+const API_URL = "https://api.api-store.workers.dev/api/fitlog";
 
 const getData = async (): Promise<Workout[]> => {
-    const res = await fetch(API_URL);
-    const data: Workout[] = await res.json();
-    return data;
+  const res = await fetch(API_URL);
+  const data: Workout[] = await res.json();
+  return data;
 };
 
-
 const Library = async () => {
-    
-    const workouts = await getData();
-    return (
+  const workouts = await getData();
+  return (
     <section
       id="library"
       className="mx-auto max-w-[1200px] scroll-mt-20 px-3 py-12"
@@ -31,11 +29,9 @@ const Library = async () => {
 
       {/* Cards */}
       <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3">
-        {
-        workouts.map((workout) => (
+        {workouts.map((workout) => (
           <WorkoutCard key={workout.id} workout={workout} />
-        ))
-        }
+        ))}
       </div>
     </section>
   );

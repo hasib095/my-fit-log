@@ -1,22 +1,45 @@
 "use client";
+
+import { WorkoutContext } from "@/context/WorkoutContext";
 import { Workout } from "@/types/workout";
+import { useContext } from "react";
+import { Bounce, toast } from "react-toastify";
 
 interface WorkoutActionsProps {
   workout: Workout;
 }
 
 const WorkoutActions = ({ workout }: WorkoutActionsProps) => {
+  const context = useContext(WorkoutContext);
+
+  if (!context) {
+    throw new Error("WorkoutAction must be used inside WorkoutProvider");
+  }
+
+  const { setPlanWorkouts, setSavedWorkouts } = context;
 
   const handleAddToPlan = () => {
-    console.log("Added to today's plan:", workout.name);
+    setPlanWorkouts((currentWorkouts) => {
+      if (currentWorkouts.some((item) => item.id === workout.id)) {
+        toast.info("This workout is already in today's plan");
+        return currentWorkouts;
+      }
+      toast.success("Added to today's plan");
+      return [...currentWorkouts, workout];
+    });
 
-    // We will connect this to PlanContext next.
   };
 
   const handleSave = () => {
-    console.log("Saved:", workout.name);
+     setSavedWorkouts((currentWorkouts) => {
+      if (currentWorkouts.some((item) => item.id === workout.id)) {
+        toast.info("This workout is already saved");
+        return currentWorkouts;
+      }
 
-    // We will connect this to PlanContext next.
+      toast.success("Workout saved for later");
+      return [...currentWorkouts, workout];
+    });
   };
 
   return (
