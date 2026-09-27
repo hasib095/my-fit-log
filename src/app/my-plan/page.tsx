@@ -124,13 +124,15 @@ const MyPlanPage = () => {
 
           {sortedWorkouts.length > 0 ? (
             <div className="w-full space-y-3">
-              {sortedWorkouts.map((workout) =>
+              {
+              sortedWorkouts.map((workout) =>
                 activeTab === "today" ? (
                   <TodayPlanCart key={workout.id} workout={workout} />
                 ) : (
                   <SavedCart key={workout.id} workout={workout} />
                 ),
-              )}
+              )
+              }
             </div>
           ) : (
             <div className="flex h-57 w-full flex-col items-center justify-center rounded-xl border border-dashed border-[#292d35]">

@@ -14,7 +14,6 @@ const WorkoutActions = ({ workout }: IWorkoutActionsProps) => {
   if (!context) {
     throw new Error("WorkoutAction must be used inside WorkoutProvider");
   }
-
   const { planWorkouts, savedWorkouts, setPlanWorkouts, setSavedWorkouts } = context;
 
   const handleAddToPlan = () => {

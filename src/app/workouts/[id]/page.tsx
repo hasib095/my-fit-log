@@ -103,7 +103,6 @@ const WorkoutDetailsPage = async ({params}: WorkoutDetailsPageProps) => {
                   <span className="text-[#858991]">
                     {index + 1}.
                   </span>
-
                   <span>{instruction}</span>
                 </li>
               ))}
@@ -138,7 +137,6 @@ const SpecRow = ({
       <span className="text-[9px] font-bold tracking-wide text-[#858991]">
         {label}
       </span>
-
       <span className="text-xs text-white">
         {value}
       </span>

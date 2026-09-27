@@ -45,7 +45,7 @@ const SavedCart = ({ workout }: { workout: Workout }) => {
           </p>
           <div className="mt-1.5 flex items-center gap-3 text-[14px] text-gray-400">
             <span>◷ {workout.duration} min</span>
-            <span>● {workout.caloriesBurned} kcal</span>
+            <span>🔥{workout.caloriesBurned} kcal</span>
             <span>★ {workout.rating}</span>
           </div>
         </div>
