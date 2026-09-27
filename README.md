@@ -1,36 +1,146 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# FitLog
 
-## Getting Started
+FitLog is a modern workout tracking web application built with Next.js. It helps users discover workouts, view detailed exercise information, create a daily workout plan, save workouts, and track completed exercises.
 
-First, run the development server:
+The project uses a clean dark-themed UI with a lime-green accent color to provide a focused and modern fitness experience.
+
+---
+
+## 📸 Project Screenshot
+
+![FitLog Screenshot](./public/screenshot.png)
+
+---
+
+## 🌐 Live Project
+
+🔗 **Live Website:** [FitLog](YOUR_LIVE_LINK_HERE)
+
+🔗 **GitHub Repository:** [GitHub](https://github.com/hasib095/my-fit-log)
+
+---
+
+## 🛠️ Technologies Used
+
+- **Next.js** – React framework for building the application
+- **React** – Building user interfaces and components
+- **TypeScript** – Type-safe development
+- **Tailwind CSS** – Styling and responsive design
+- **Context API** – Managing workout plan and saved workout state
+- **REST API** – Fetching workout data
+- **React Toastify** – Showing notifications
+- **Next.js Image** – Optimized image handling
+
+---
+
+## Main Features
+
+### 1. Workout Library
+
+Users can browse a collection of workouts from the workout library.
+
+Each workout displays:
+
+- Workout name
+- Muscle groups
+- Equipment
+- Duration
+- Calories burned
+- Rating
+
+---
+
+### 2 Workout Details
+
+Users can view detailed information about any workout.
+
+The details page includes:
+
+- Workout name
+- Description
+- Muscle groups
+- Equipment
+- Difficulty
+- Sets
+- Reps
+- Duration
+- Calories
+- Rating
+- Step-by-step instructions
+
+---
+
+### 3. My Plan
+
+Users can create their own daily workout plan by adding exercises.
+
+The My Plan section allows users to:
+
+- Add workouts to today's plan
+- View planned workouts
+- See total exercises
+- See total workout duration
+- See total calories
+- Mark workouts as completed
+- Remove workouts from the plan
+
+---
+
+### 4. Save Workouts
+
+Users can save workouts that they want to access later.
+
+The saved workouts can be viewed from the **Saved** section of My Plan.
+
+---
+
+### 5. Responsive Dark UI
+
+FitLog uses a modern dark-themed interface designed for a focused workout experience.
+
+The application is responsive and works on:
+
+- Desktop
+- Tablet
+- Mobile devices
+
+---
+
+## Dependencies
+
+The main dependencies used in this project are:
+
+```text
+next
+react
+react-dom
+react-toastify
+
+## How to Run the Project Locally
+
+Follow the steps below to run the FitLog project on your local machine.
+
+### 1. Clone the Repository
+
+First, clone the project repository:
 
 ```bash
+git clone YOUR_GITHUB_REPOSITORY_LINK
+### 2. Go to the Project Directory
+cd fitlog
+### 3. Install Dependencies
+
+Install all the required dependencies:
+
+npm install
+### 4. Start the Development Server
+
+Run the following command to start the development server:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open the Application
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+After the server starts, open your browser and visit:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+http://localhost:3000
