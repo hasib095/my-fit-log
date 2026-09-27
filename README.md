@@ -129,13 +129,14 @@ Follow the steps below to run the FitLog project on your local machine.
 First, clone the project repository:
 
 git clone YOUR_GITHUB_REPOSITORY_LINK
-### 2. Go to the Project Directory
-cd fitlog
-### 3. Install Dependencies
 
+### 2. Go to the Project Directory
+- cd fitlog
+
+### 3. Install Dependencies
 Install all the required dependencies:
 
-npm install
+- npm install
 ### 4. Start the Development Server
 
 Run the following command to start the development server:
