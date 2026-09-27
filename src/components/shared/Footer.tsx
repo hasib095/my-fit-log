@@ -24,7 +24,6 @@ const Footer = () => {
                 <div className='p-4'>
                     <p className='text-[#6B7280]'>© 2026 FitLog — Workout Library. Train hard, log honest.</p>
                 </div>
-
             </div>
         </div>
     );

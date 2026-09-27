@@ -10,7 +10,7 @@ const WorkoutCard = ({ workout }: WorkoutCardProps) => {
   return (
     <Link href={`/workouts/${workout.id}`}>
       <div className="container mx-auto group overflow-hidden rounded-lg border border-[#24272d] bg-[#15171c] transition duration-300 hover:-translate-y-1 hover:border-[#ccff00]">
-        <div className="relative h-[140px] w-full overflow-hidden">
+        <div className="relative h-[340px] w-full overflow-hidden">
           <Image
             src={workout.image}
             alt={workout.name}
