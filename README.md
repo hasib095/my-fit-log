@@ -6,9 +6,12 @@ The project uses a clean dark-themed UI with a lime-green accent color to provid
 
 ---
 
-## 📸 Project Screenshot
+## Project Screenshot
 
-![FitLog Screenshot](./public/screenshot.png)
+<img width="1600" height="672" alt="Screenshot 2026-09-27 181329" src="https://github.com/user-attachments/assets/054a356b-f33d-4fa5-afb1-e70b7038e8df" />
+<img width="1565" height="895" alt="Screenshot 2026-09-27 181409" src="https://github.com/user-attachments/assets/1d5a625d-87f6-446d-838c-bd345d5e9b2c" />
+<img width="1523" height="728" alt="Screenshot 2026-09-27 181350" src="https://github.com/user-attachments/assets/53053b54-554a-4353-8167-7d5364eafe37" />
+<img width="1713" height="788" alt="Screenshot 2026-09-27 181445" src="https://github.com/user-attachments/assets/6eb6c798-f470-4402-af80-e68804d96768" />
 
 ---
 
@@ -116,6 +119,7 @@ react
 react-dom
 react-toastify
 
+---
 ## How to Run the Project Locally
 
 Follow the steps below to run the FitLog project on your local machine.
@@ -124,7 +128,6 @@ Follow the steps below to run the FitLog project on your local machine.
 
 First, clone the project repository:
 
-```bash
 git clone YOUR_GITHUB_REPOSITORY_LINK
 ### 2. Go to the Project Directory
 cd fitlog
