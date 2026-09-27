@@ -8,30 +8,22 @@ interface WorkoutDetailsPageProps {
     id: string;
   }>;
 }
-
-const WorkoutDetailsPage = async ({
-  params,
-}: WorkoutDetailsPageProps) => {
+const WorkoutDetailsPage = async ({params}: WorkoutDetailsPageProps) => {
   const { id } = await params;
-
-  const response = await fetch(
-    `https://api.api-store.workers.dev/api/fitlog/${id}`,
+  // const booksData = await getBooks();
+  const response = await fetch(`https://api.api-store.workers.dev/api/fitlog/${id}`,
     {
       cache: "no-store",
     }
   );
-
   if (!response.ok) {
     notFound();
   }
-
   const workout: Workout = await response.json();
 
   return (
     <main className="mx-auto max-w-[1200px] px-4 py-10">
       <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
-
-        {/* ================= LEFT SIDE ================= */}
         <div className="relative h-[500px] overflow-hidden rounded-xl">
           <Image
             src={workout.image}
@@ -41,8 +33,6 @@ const WorkoutDetailsPage = async ({
             className="object-cover"
           />
         </div>
-
-        {/* ================= RIGHT SIDE ================= */}
         <div>
 
           {/* Title */}
@@ -67,47 +57,38 @@ const WorkoutDetailsPage = async ({
             ))}
           </div>
 
-          {/* ================= SPECS ================= */}
           <div className="mt-5 overflow-hidden rounded-xl border border-[#24272d] bg-[#15181e]">
 
             <SpecRow
               label="EQUIPMENT"
               value={workout.equipment}
             />
-
             <SpecRow
               label="DIFFICULTY"
               value={workout.difficulty}
             />
-
             <SpecRow
               label="SETS"
               value={String(workout.sets)}
             />
-
             <SpecRow
               label="REPS"
               value={workout.reps}
             />
-
             <SpecRow
               label="DURATION"
               value={`${workout.duration} min`}
             />
-
             <SpecRow
               label="CALORIES"
               value={`${workout.caloriesBurned} kcal`}
             />
-
             <SpecRow
               label="RATING"
               value={String(workout.rating)}
               last
             />
           </div>
-
-          {/* ================= INSTRUCTIONS ================= */}
           <div className="mt-6">
             <h2 className="text-sm font-black uppercase text-[#D1D5DB]">
               Instructions
@@ -128,10 +109,7 @@ const WorkoutDetailsPage = async ({
               ))}
             </ol>
           </div>
-
-          {/* ================= BUTTONS ================= */}
-          <WorkoutActions workout={workout} />
-
+          <WorkoutActions workout={workout}/>
         </div>
       </div>
     </main>
@@ -139,9 +117,6 @@ const WorkoutDetailsPage = async ({
 };
 
 export default WorkoutDetailsPage;
-
-
-/* ================= SPEC ROW ================= */
 
 interface SpecRowProps {
   label: string;

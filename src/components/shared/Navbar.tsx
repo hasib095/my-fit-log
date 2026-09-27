@@ -1,5 +1,4 @@
 "use client";
-
 import { WorkoutContext } from "@/context/WorkoutContext";
 import Image from "next/image";
 import Link from "next/link";
@@ -19,10 +18,7 @@ const Navbar = () => {
 
   const linkClass = (isActive: boolean) =>
     `rounded-full px-4 py-2 text-xs font-medium transition ${
-      isActive
-        ? "bg-[#182500] text-[#ccff00]"
-        : "text-[#8c8d91] hover:text-white"
-    }`;
+      isActive? "bg-[#182500] text-[#ccff00]": "text-[#8c8d91] hover:text-white"}`;
 
   return (
     <nav className="h-[68px] w-full border-b border-[#24252a] bg-[#0c0d0f]">
@@ -35,7 +31,11 @@ const Navbar = () => {
         </Link>
 
         <div className="flex items-center gap-1 sm:gap-2">
-          <Link href="/" aria-current={pathname === "/" ? "page" : undefined} className={linkClass(pathname === "/")}>
+          <Link
+            href="/"
+            aria-current={pathname === "/" ? "page" : undefined}
+            className={linkClass(pathname === "/")}
+          >
             Workouts
           </Link>
           <Link
@@ -48,14 +48,20 @@ const Navbar = () => {
         </div>
 
         <div className="flex shrink-0 items-center gap-3 text-[11px] sm:gap-6">
-          <Link href="/my-plan" className="flex items-center gap-2 text-[#b5b6ba]">
+          <Link
+            href="/my-plan"
+            className="flex items-center gap-2 text-[#b5b6ba]"
+          >
             <span className="hidden sm:inline">Plan</span>
             <span className="flex h-[18px] min-w-[18px] items-center justify-center rounded-full bg-[#ccff00] px-1 text-[10px] font-bold text-black">
               {planWorkouts.length}
             </span>
           </Link>
 
-          <Link href="/my-plan" className="flex items-center gap-2 text-[#8c8d91]">
+          <Link
+            href="/my-plan"
+            className="flex items-center gap-2 text-[#8c8d91]"
+          >
             <span className="hidden sm:inline">Saved</span>
             <span className="flex h-[18px] min-w-[18px] items-center justify-center rounded-full border border-[#3a3b40] px-1 text-[10px] text-[#b5b6ba]">
               {savedWorkouts.length}
