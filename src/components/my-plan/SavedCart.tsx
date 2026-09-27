@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useContext, useState } from "react";
 
-const TodayPlanCart = ({ workout }: { workout: Workout }) => {
+const SavedCart = ({ workout }: { workout: Workout }) => {
   const context = useContext(WorkoutContext);
   const [isDone, setIsDone] = useState(false);
 
@@ -14,10 +14,10 @@ const TodayPlanCart = ({ workout }: { workout: Workout }) => {
     throw new Error("TodayPlanCart must be rendered inside WorkoutProvider");
   }
 
-  const { setPlanWorkouts } = context;
+  const { setSavedWorkouts } = context;
 
   const handleRemove = () => {
-    setPlanWorkouts((currentWorkouts) =>
+    setSavedWorkouts((currentWorkouts) =>
       currentWorkouts.filter((item) => item.id !== workout.id),
     );
   };
@@ -54,18 +54,10 @@ const TodayPlanCart = ({ workout }: { workout: Workout }) => {
       <div className="flex flex-wrap items-center gap-2 sm:ml-auto sm:justify-end">
         <Link
           href={`/workouts/${workout.id}`}
-          className="rounded-full border border-[#303641] px-4 py-2 text-[14px] text-gray-400 transition hover:border-gray-500 hover:text-white"
+          className="rounded-full border border-[#303641] px-4 py-2 text-[17px] text-gray-400 transition hover:border-gray-500 hover:text-white"
         >
           View Details
         </Link>
-        <button
-          type="button"
-          onClick={() => setIsDone(true)}
-          disabled={isDone}
-          className="rounded-full bg-[#b6ff00] px-4 py-2 text-[14px] font-bold text-black transition hover:bg-[#c8ff3b] disabled:cursor-default disabled:bg-[#303641] disabled:text-gray-300"
-        >
-          {isDone ? "✓ Completed" : "✓ Mark as Done"}
-        </button>
         <button
           type="button"
           onClick={handleRemove}
@@ -79,4 +71,4 @@ const TodayPlanCart = ({ workout }: { workout: Workout }) => {
   );
 };
 
-export default TodayPlanCart;
+export default SavedCart;
