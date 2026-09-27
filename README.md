@@ -17,7 +17,7 @@ The project uses a clean dark-themed UI with a lime-green accent color to provid
 
 ## 🌐 Live Project
 
-🔗 **Live Website:** [FitLog](YOUR_LIVE_LINK_HERE)
+🔗 **Live Website:** ([YOUR_LIVE_LINK_HERE](https://my-fit-log-gamma.vercel.app/))
 
 🔗 **GitHub Repository:** [GitHub](https://github.com/hasib095/my-fit-log)
 
